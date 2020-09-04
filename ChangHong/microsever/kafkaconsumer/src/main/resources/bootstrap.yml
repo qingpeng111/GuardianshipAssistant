@@ -1,0 +1,18 @@
+server:
+  port: 8082
+spring:
+  application:
+    name: kafkaconsumer
+  profiles:
+    active: dev
+  cloud:
+    config:
+      uri: http://localhost:8762
+      fail-fast: true
+  #kafka配置
+  kafka:
+    consumer:
+      enable-auto-commit: true
+      group-id: applog
+      auto-offset-reset: latest
+      bootstrap-servers: localhost:9092

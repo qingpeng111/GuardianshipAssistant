@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+
+<mapper namespace="com.changhong.repository.KafkaconsumerRepository">
+
+
+<!--******************************************************************-->
+    <select id="findStatisticsAll" resultType="statistics">
+        select * from t_statistics limit #{param1},#{param2}
+    </select>
+
+    <select id="findStatisticsByTimeTempAndType" resultType="statistics">
+        select *from t_statistics where  time>=#{param1} and time &lt;#{param2} and type=#{param3} limit #{param4},#{param5}
+    </select>
+
+    <select id="findStatisticsByType" resultType="statistics">
+        select *from t_statistics where  type=#{param1} limit #{param2},#{param3}
+    </select>
+
+    <select id="findStatisticsByTimeTemp" resultType="statistics">
+        select *from t_statistics where  time>=#{param1} and time &lt;#{param2}  limit #{param3},#{param4}
+    </select>
+
+    <select id="findStatisticsByTime" resultType="statistics">
+        select *from t_statistics where  time=#{param1}  limit #{param2},#{param3}
+    </select>
+
+    <update id="update" parameterMap="anomalous">
+        update t_anomalous set  is_abnormal=#{is_abnormal} where time=#{time} and type=#{type}
+
+    </update>
+
+
+    <!--<resultMap id="BaseResultMap" type="com.interview.mybatislearning.model.UserEntity">-->
+        <!--<id column="id" property="id" jdbcType="BIGINT"/>-->
+        <!--<result column="username" property="userName" jdbcType="VARCHAR"/>-->
+        <!--<result column="password" property="passWord" jdbcType="VARCHAR"/>-->
+        <!--<result column="nick_name" property="nickName" jdbcType="VARCHAR"/>-->
+    <!--</resultMap>-->
+
+    <!--<sql id="Base_Column_List">-->
+        <!--id, username, password, nick_name-->
+    <!--</sql>-->
+
+    <!--<sql id="Base_Where_List">-->
+        <!--<if test="userName != null  and userName != ''">-->
+            <!--and userName = #{userName}-->
+        <!--</if>-->
+    <!--</sql>-->
+
+    <!--<select id="getAll" resultMap="BaseResultMap">-->
+        <!--SELECT-->
+        <!--<include refid="Base_Column_List"/>-->
+        <!--FROM t_user-->
+    <!--</select>-->
+
+    <!--<select id="getOne" parameterType="Long" resultMap="BaseResultMap">-->
+        <!--SELECT-->
+        <!--<include refid="Base_Column_List"/>-->
+        <!--FROM t_user-->
+        <!--WHERE id = #{id}-->
+    <!--</select>-->
+
+    <!--<insert id="insert" parameterType="com.interview.mybatislearning.model.UserEntity">-->
+       <!--INSERT INTO-->
+       		<!--t_user-->
+       		<!--(username,password,nick_name)-->
+       	<!--VALUES-->
+       		<!--(#{userName}, #{passWord}, #{nickName})-->
+    <!--</insert>-->
+
+    <!--<update id="update" parameterType="com.interview.mybatislearning.model.UserEntity">-->
+        <!--UPDATE-->
+        <!--t_user-->
+        <!--SET-->
+        <!--<if test="userName != null">username = #{userName},</if>-->
+        <!--<if test="passWord != null">password = #{passWord},</if>-->
+        <!--nick_name = #{nickName}-->
+        <!--WHERE-->
+        <!--id = #{id}-->
+    <!--</update>-->
+
+    <!--<delete id="delete" parameterType="Long">-->
+       <!--DELETE FROM-->
+       		 <!--t_user-->
+       <!--WHERE-->
+
+       		 <!--id =#{id}-->
+    <!--</delete>-->
+</mapper>
