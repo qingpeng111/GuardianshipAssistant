@@ -8,6 +8,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @SpringBootApplication
 @MapperScan("com.changhong.repository")
 public class FindApplication {
+//    #启动类
     public static void main(String[] args) {
         SpringApplication.run(FindApplication.class,args);
     }
