@@ -2,7 +2,8 @@ server:
   port: 8010
 spring:
   datasource:
-    url: jdbc:mysql://192.168.33.2:3306/anomalous?useUnicode=true&characterEncoding=UTF-8
+#  mysql 192.168.33.2
+    url: jdbc:mysql://mysql:3306/anomalous?useUnicode=true&characterEncoding=UTF-8
     username: root
     password: hadoop
     driver-class-name: com.mysql.cj.jdbc.Driver

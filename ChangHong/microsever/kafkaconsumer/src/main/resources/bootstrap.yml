@@ -1,5 +1,5 @@
-server:
-  port: 8082
+#server:
+#  port: 8020
 spring:
   application:
     name: kafkaconsumer
@@ -11,8 +11,15 @@ spring:
       fail-fast: true
   #kafka配置
   kafka:
+    producer:
+      bootstrap-servers: localhost:9092
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.apache.kafka.common.serialization.StringSerializer
+
     consumer:
+      bootstrap-servers: localhost:9092
       enable-auto-commit: true
       group-id: applog
       auto-offset-reset: latest
-      bootstrap-servers: localhost:9092
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: org.apache.kafka.common.serialization.StringDeserializer

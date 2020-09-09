@@ -5,31 +5,46 @@
 
 
 <!--******************************************************************-->
-    <select id="findStatisticsAll" resultType="statistics">
-        select * from t_statistics limit #{param1},#{param2}
+    <!--插入anomalous-->
+    <insert id="insertIntoAnomalous" parameterType="anomalous" >
+        INSERT ignore INTO t_anomalous(time,type,source,target,port_s,port_t,details,is_abnormal)
+        VALUES
+        (#{time},#{type},#{source},#{target},#{port_s},#{port_t},#{details},#{is_abnormal});
+    </insert>
+
+    <!--插入statistics(展示没有用到)-->
+    <!--<insert id="insertIntoStatistics" parameterType="statistics" >-->
+        <!--INSERT ignore INTO t_statistics(time,type,count)-->
+        <!--VALUES-->
+        <!--(#{time},#{type},#{count});-->
+    <!--</insert>-->
+
+    <!--<select id="findCountBypeAndTime" resultType="statistics">-->
+        <!--select *from t_statistics-->
+        <!--where-->
+        <!--time=#{param1}-->
+        <!--and type=#{param2}-->
+    <!--</select>-->
+
+    <!--根据时间和类型查询-->
+    <select id="findByTimeAndType" resultType="statistics">
+        select *from t_statistics where  time=#{param1} and type=#{param2} order by time desc
     </select>
 
-    <select id="findStatisticsByTimeTempAndType" resultType="statistics">
-        select *from t_statistics where  time>=#{param1} and time &lt;#{param2} and type=#{param3} limit #{param4},#{param5}
-    </select>
+    <!--新插入一条数据-->
+    <insert id="insertIntoStatistics">
+        INSERT INTO t_statistics(time,type,total,abnomal_total,attack_total) VALUES(#{param1},#{param2},#{param3},#{param4},#{param5})
+    </insert>
 
-    <select id="findStatisticsByType" resultType="statistics">
-        select *from t_statistics where  type=#{param1} limit #{param2},#{param3}
-    </select>
-
-    <select id="findStatisticsByTimeTemp" resultType="statistics">
-        select *from t_statistics where  time>=#{param1} and time &lt;#{param2}  limit #{param3},#{param4}
-    </select>
-
-    <select id="findStatisticsByTime" resultType="statistics">
-        select *from t_statistics where  time=#{param1}  limit #{param2},#{param3}
-    </select>
-
-    <update id="update" parameterMap="anomalous">
-        update t_anomalous set  is_abnormal=#{is_abnormal} where time=#{time} and type=#{type}
-
+    <!--更新total和abnomal_total-->
+    <update id="updateAbnomalTotalByTimeAndType">
+        update t_statistics A set A.total = A.total+1 , A.abnomal_total=A.abnomal_total+1  where A.time=#{param1} and A.type=#{param2}
     </update>
 
+    <!--更新total-->
+    <update id="updateTotalByTimeAndType">
+        update t_statistics A set A.total = A.total+1 where A.time=#{param1} and A.type=#{param2}
+    </update>
 
     <!--<resultMap id="BaseResultMap" type="com.interview.mybatislearning.model.UserEntity">-->
         <!--<id column="id" property="id" jdbcType="BIGINT"/>-->

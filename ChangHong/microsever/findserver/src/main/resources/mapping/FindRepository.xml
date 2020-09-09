@@ -2,51 +2,79 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 
 <mapper namespace="com.changhong.repository.FindRepository">
-    <select id="findAll" resultType="anomalous">
-        select * from t_anomalous limit #{param1},#{param2}
+    <!--select *from t_anomalous where  time>="2011-03-05 01:53:56" and time<="2018-03-05 01:53:56" and type="modbus" and source="192.168.71.1" and port_s="8280" and is_abnormal=1  limit 0,10;-->
+
+
+    <select id="findAnomalousTraffic" resultType="anomalous">
+        select *from t_anomalous
+        where
+        time>=#{param1}
+        and time &lt;#{param2}
+        and type=#{param3}
+        and source=#{param4}
+        and port_s=#{param5}
+        and is_abnormal=#{param6}
+        order by time desc
+        limit #{param7},#{param8}
     </select>
 
-    <select id="findByTimeTempAndType" resultType="anomalous">
-        select *from t_anomalous where  time>=#{param1} and time &lt;#{param2} and type=#{param3} limit #{param4},#{param5}
+    <select id="findStatistics" resultType="statistics">
+        select *from t_statistics where type=#{param1} order by time desc;
+
     </select>
 
-    <select id="findByType" resultType="anomalous">
-        select *from t_anomalous where  type=#{param1} limit #{param2},#{param3}
-    </select>
-
-    <select id="findByTimeTemp" resultType="anomalous">
-        select *from t_anomalous where  time>=#{param1} and time &lt;#{param2}  limit #{param3},#{param4}
-    </select>
-
-    <select id="findByTime" resultType="anomalous">
-        select *from t_anomalous where  time=#{param1}  limit #{param2},#{param3}
-    </select>
-
-<!--******************************************************************-->
-    <select id="findStatisticsAll" resultType="statistics">
-        select * from t_statistics limit #{param1},#{param2}
-    </select>
-
-    <select id="findStatisticsByTimeTempAndType" resultType="statistics">
-        select *from t_statistics where  time>=#{param1} and time &lt;#{param2} and type=#{param3} limit #{param4},#{param5}
-    </select>
-
-    <select id="findStatisticsByType" resultType="statistics">
-        select *from t_statistics where  type=#{param1} limit #{param2},#{param3}
-    </select>
-
-    <select id="findStatisticsByTimeTemp" resultType="statistics">
-        select *from t_statistics where  time>=#{param1} and time &lt;#{param2}  limit #{param3},#{param4}
-    </select>
-
-    <select id="findStatisticsByTime" resultType="statistics">
-        select *from t_statistics where  time=#{param1}  limit #{param2},#{param3}
-    </select>
-
-    <update id="update" parameterType="anomalous">
-        update t_anomalous set  is_abnormal=#{is_abnormal} where time=#{time} and type=#{type}
-
+    <!--更新is_abnomal，需要对两张表操作-->
+    <update id="updateIsabnomalByTypeAndTime">
+        update t_anomalous  set  is_abnormal=#{param1} where type=#{param2} and time=#{param3};
     </update>
+    <update id="updateAttackTotalByTimeAndType">
+        update t_statistics A set  A.attack_total=A.attack_total+1  where A.time=#{param1} and A.type=#{param2}
+    </update>
+    <!--<select id="findAll" resultType="anomalous">-->
+        <!--select * from t_anomalous limit #{param1},#{param2}-->
+    <!--</select>-->
+
+    <!--<select id="findByTimeTempAndType" resultType="anomalous">-->
+        <!--select *from t_anomalous where  time>=#{param1} and time &lt;#{param2} and type=#{param3} limit #{param4},#{param5}-->
+    <!--</select>-->
+
+    <!--<select id="findByType" resultType="anomalous">-->
+        <!--select *from t_anomalous where  type=#{param1} limit #{param2},#{param3}-->
+    <!--</select>-->
+
+    <!--<select id="findByTimeTemp" resultType="anomalous">-->
+        <!--select *from t_anomalous where  time>=#{param1} and time &lt;#{param2}  limit #{param3},#{param4}-->
+    <!--</select>-->
+
+    <!--<select id="findByTime" resultType="anomalous">-->
+        <!--select *from t_anomalous where  time=#{param1}  limit #{param2},#{param3}-->
+    <!--</select>-->
+
+<!--&lt;!&ndash;******************************************************************&ndash;&gt;-->
+    <!--<select id="findStatisticsAll" resultType="statistics">-->
+        <!--select * from t_statistics limit #{param1},#{param2}-->
+    <!--</select>-->
+
+    <!--<select id="findStatisticsByTimeTempAndType" resultType="statistics">-->
+        <!--select *from t_statistics where  time>=#{param1} and time &lt;#{param2} and type=#{param3} limit #{param4},#{param5}-->
+    <!--</select>-->
+
+    <!--<select id="findStatisticsByType" resultType="statistics">-->
+        <!--select *from t_statistics where  type=#{param1} limit #{param2},#{param3}-->
+    <!--</select>-->
+
+    <!--<select id="findStatisticsByTimeTemp" resultType="statistics">-->
+        <!--select *from t_statistics where  time>=#{param1} and time &lt;#{param2}  limit #{param3},#{param4}-->
+    <!--</select>-->
+
+    <!--<select id="findStatisticsByTime" resultType="statistics">-->
+        <!--select *from t_statistics where  time=#{param1}  limit #{param2},#{param3}-->
+    <!--</select>-->
+
+    <!--<update id="update" parameterType="anomalous">-->
+        <!--update t_anomalous set  is_abnormal=#{is_abnormal} where time=#{time} and type=#{type}-->
+
+    <!--</update>-->
 
 
     <!--<resultMap id="BaseResultMap" type="com.interview.mybatislearning.model.UserEntity">-->

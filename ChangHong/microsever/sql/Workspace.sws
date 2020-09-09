@@ -4,9 +4,7 @@
 
 <Workspace>
 	<Local Expanded="Yes">
-		<Model Expanded="Yes" ID="{E6987E92-273D-41AE-8454-F474F394BDDA}" Loaded="No" Name="异常检测模型" Type="{1E597170-9350-11D1-AB3C-0020AF71E433}" URL="异常检测模型.cdm"/>
 		<Model Expanded="Yes" ID="{E15D0D4D-E6EA-415A-AA44-05F416C7C8BD}" Name="异常检测模型2" Type="{CDE44E21-9669-11D1-9914-006097355D9B}" URL="异常检测模型2.pdm"/>
-		<Model Expanded="Yes" ID="{E8F38B29-E156-4061-BE72-63E7E99F965B}" Loaded="No" Name="异常检测模型" Type="{CDE44E21-9669-11D1-9914-006097355D9B}" URL="异常检测模型.pdm"/>
 		<Model Expanded="Yes" ID="{E8F38B29-E156-4061-BE72-63E7E99F965B}" Name="异常检测模型" Selected="Yes" Type="{CDE44E21-9669-11D1-9914-006097355D9B}" URL="异常检测模型.pdm"/>
 	</Local>
 	<BrowserModule Name="Repository"/>

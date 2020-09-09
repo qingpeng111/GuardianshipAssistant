@@ -70,22 +70,23 @@ create table t_statistics
    time                 datetime,
    type                 varchar(10),
    count                numeric(15,0),
+   count_anomalous                numeric(15,0),
    primary key (key_s)
 );
-INSERT INTO t_statistics VALUES(null,'2017-03-05 01:53:55.63','S7',11);
-INSERT INTO t_statistics VALUES(null,'2014-03-05 01:53:55.63','http',23);
-INSERT INTO t_statistics VALUES(null,'2012-03-05 01:53:55.63','modbus',90);
-INSERT INTO t_statistics VALUES(null,'2013-03-05 01:53:55.63','S7',11);
-INSERT INTO t_statistics VALUES(null,'2017-04-05 01:53:55.63','http',23);
-INSERT INTO t_statistics VALUES(null,'2015-03-05 01:53:55.63','modbus',90);
-INSERT INTO t_statistics VALUES(null,'2017-06-05 01:53:55.63','S7',11);
-INSERT INTO t_statistics VALUES(null,'2017-06-05 01:53:55.63','http',23);
-INSERT INTO t_statistics VALUES(null,'2017-03-05 01:53:55.63','modbus',90);
-INSERT INTO t_statistics VALUES(null,'2015-03-05 01:53:55.63','S7',11);
-INSERT INTO t_statistics VALUES(null,'2017-03-05 01:53:55.63','http',23);
-INSERT INTO t_statistics VALUES(null,'2017-06-05 01:53:55.63','modbus',90);
-INSERT INTO t_statistics VALUES(null,'2017-03-05 01:53:55.63','S7',11);
-INSERT INTO t_statistics VALUES(null,'2017-06-05 01:53:55.63','http',23);
-INSERT INTO t_statistics VALUES(null,'2015-03-05 01:53:55.63','modbus',90);
+INSERT INTO t_statistics VALUES('2017-03-05 01:53:55.63','S7',11,2);
+INSERT INTO t_statistics VALUES(null,'2014-03-05 01:53:55.63','http',23,3);
+INSERT INTO t_statistics VALUES(null,'2012-03-05 01:53:55.63','modbus',90,5);
+INSERT INTO t_statistics VALUES(null,'2013-03-05 01:53:55.63','S7',11,8);
+INSERT INTO t_statistics VALUES(null,'2017-04-05 01:53:55.63','http',23,3);
+INSERT INTO t_statistics VALUES(null,'2015-03-05 01:53:55.63','modbus',90,6);
+INSERT INTO t_statistics VALUES(null,'2017-06-05 01:53:55.63','S7',11,1);
+INSERT INTO t_statistics VALUES(null,'2017-06-05 01:53:55.63','http',23,3);
+INSERT INTO t_statistics VALUES(null,'2017-03-05 01:53:55.63','modbus',90,6);
+INSERT INTO t_statistics VALUES(null,'2015-03-05 01:53:55.63','S7',11,9);
+INSERT INTO t_statistics VALUES(null,'2017-03-05 01:53:55.63','http',23,1);
+INSERT INTO t_statistics VALUES(null,'2017-06-05 01:53:55.63','modbus',90,5);
+INSERT INTO t_statistics VALUES(null,'2017-03-05 01:53:55.63','S7',11,4);
+INSERT INTO t_statistics VALUES(null,'2017-06-05 01:53:55.63','http',23,6);
+INSERT INTO t_statistics VALUES(null,'2015-03-05 01:53:55.63','modbus',90,3);
 
 

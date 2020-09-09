@@ -1,28 +1,28 @@
 package com.changhong.entity;
 
 import lombok.Data;
+import org.springframework.stereotype.Component;
 
 import java.util.Date;
+@Component
 @Data
 public class statistics {
-    private  int    key_s;
+///    private  int    key_s;
     private  Date   time;
     private  String type;
-    private  int    count;
+    private  int    total;
+    private  int    abnomaltotal;
+    private  int    attacktotal;
 
-    public statistics(int key_s, Date time, String type, int count) {
-        this.key_s = key_s;
+    public statistics() {
+    }
+
+    public statistics(Date time, String type, int total, int abnomaltotal, int attacktotal) {
         this.time = time;
         this.type = type;
-        this.count = count;
-    }
-
-    public int getKey_s() {
-        return key_s;
-    }
-
-    public void setKey_s(int key_s) {
-        this.key_s = key_s;
+        this.total = total;
+        this.abnomaltotal = abnomaltotal;
+        this.attacktotal = attacktotal;
     }
 
     public Date getTime() {
@@ -41,11 +41,38 @@ public class statistics {
         this.type = type;
     }
 
-    public int getCount() {
-        return count;
+    public int getTotal() {
+        return total;
     }
 
-    public void setCount(int count) {
-        this.count = count;
+    public void setTotal(int total) {
+        this.total = total;
+    }
+
+    public int getAbnomaltotal() {
+        return abnomaltotal;
+    }
+
+    public void setAbnomaltotal(int abnomaltotal) {
+        this.abnomaltotal = abnomaltotal;
+    }
+
+    public int getAttacktotal() {
+        return attacktotal;
+    }
+
+    public void setAttacktotal(int attacktotal) {
+        this.attacktotal = attacktotal;
+    }
+
+    @Override
+    public String toString() {
+        return "statistics{" +
+                "time=" + time +
+                ", type='" + type + '\'' +
+                ", total=" + total +
+                ", abnomaltotal=" + abnomaltotal +
+                ", attacktotal=" + attacktotal +
+                '}';
     }
 }

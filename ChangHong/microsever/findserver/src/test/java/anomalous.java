@@ -1,10 +1,6 @@
-package com.changhong.entity;
-
 import lombok.Data;
-import org.springframework.context.annotation.Bean;
 import org.springframework.stereotype.Component;
 
-import java.sql.Time;
 import java.util.Date;
 @Component
 @Data

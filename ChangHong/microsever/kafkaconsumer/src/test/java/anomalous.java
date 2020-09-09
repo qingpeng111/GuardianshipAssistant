@@ -1,11 +1,8 @@
-package com.changhong.entity;
-
 import lombok.Data;
-import org.springframework.context.annotation.Bean;
 import org.springframework.stereotype.Component;
 
-import java.sql.Time;
 import java.util.Date;
+
 @Component
 @Data
 public class anomalous {
@@ -16,7 +13,7 @@ public class anomalous {
     private String  port_s;
     private String  port_t;
     private  String details;
-    private int is_abnormal;
+    private Boolean is_abnormal;
 
     public Date getTime() {
         return time;
@@ -74,15 +71,15 @@ public class anomalous {
         this.details = details;
     }
 
-    public int getIs_abnormal() {
+    public Boolean getIs_abnormal() {
         return is_abnormal;
     }
 
-    public void setIs_abnormal(int is_abnormal) {
+    public void setIs_abnormal(Boolean is_abnormal) {
         this.is_abnormal = is_abnormal;
     }
 
-    public anomalous(Date time, String type, String source, String target, String port_s, String port_t, String details, int is_abnormal) {
+    public anomalous(Date time, String type, String source, String target, String port_s, String port_t, String details, Boolean is_abnormal) {
         this.time = time;
         this.type = type;
         this.source = source;
