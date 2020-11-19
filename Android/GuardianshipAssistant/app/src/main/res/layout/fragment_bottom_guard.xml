@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:background="#ece7e7"
+	android:columnCount="4"
+	android:orientation="horizontal"
+	android:rowCount="5">
+
+
+	<Button
+		android:id="@+id/btn_game"
+		android:layout_rowSpan="1"
+		android:layout_rowWeight="1"
+		android:layout_columnSpan="1"
+		android:layout_columnWeight="1"
+		android:layout_gravity="fill"
+		android:layout_margin="0.5dp"
+		android:background="#ffffff"
+		android:text="屏蔽游戏"
+		android:textColor="@color/blue"></Button>
+
+	<Button
+		android:id="@+id/btn_video"
+		android:layout_rowSpan="1"
+		android:layout_rowWeight="1"
+		android:layout_columnSpan="1"
+		android:layout_columnWeight="1"
+		android:layout_gravity="fill"
+		android:layout_margin="0.5dp"
+		android:background="#ffffff"
+		android:text="屏蔽视频"
+		android:textColor="@color/blue" />
+
+	<Button
+		android:id="@+id/btn_scan_file"
+		android:layout_rowSpan="1"
+		android:layout_rowWeight="1"
+		android:layout_columnSpan="1"
+		android:layout_columnWeight="1"
+		android:layout_gravity="fill"
+		android:layout_margin="0.5dp"
+		android:background="#ffffff"
+		android:text="扫描文件"
+		android:textColor="@color/blue" />
+
+	<Button
+		android:id="@+id/btn_novel"
+		android:layout_rowSpan="1"
+		android:layout_rowWeight="1"
+		android:layout_columnSpan="1"
+		android:layout_columnWeight="1"
+		android:layout_gravity="fill"
+		android:layout_margin="0.5dp"
+		android:background="#ffffff"
+		android:text="屏蔽小说"
+		android:textColor="@color/blue" />
+
+	<Button
+		android:id="@+id/btn_news"
+		android:layout_rowSpan="1"
+		android:layout_rowWeight="1"
+		android:layout_columnSpan="1"
+		android:layout_columnWeight="1"
+		android:layout_gravity="fill"
+		android:layout_margin="0.5dp"
+		android:background="#ffffff"
+		android:text="屏蔽新闻"
+		android:textColor="@color/blue" />
+
+	<Button
+		android:id="@+id/btn_remote_lock_screen"
+		android:layout_rowSpan="1"
+		android:layout_rowWeight="1"
+		android:layout_columnSpan="1"
+		android:layout_columnWeight="1"
+		android:layout_gravity="fill"
+		android:layout_margin="0.5dp"
+		android:background="#ffffff"
+		android:text="远程锁屏"
+		android:textColor="@color/blue" />
+
+	<Button
+		android:id="@+id/btn_sound_record"
+		android:layout_rowSpan="1"
+		android:layout_rowWeight="1"
+		android:layout_columnSpan="1"
+		android:layout_columnWeight="1"
+		android:layout_gravity="fill"
+		android:layout_margin="0.5dp"
+		android:background="#ffffff"
+		android:text="通话记录"
+		android:textColor="@color/blue" />
+
+	<Button
+		android:id="@+id/btn_message_record"
+		android:layout_rowSpan="1"
+		android:layout_rowWeight="1"
+		android:layout_columnSpan="1"
+		android:layout_columnWeight="1"
+		android:layout_gravity="fill"
+		android:layout_margin="0.5dp"
+		android:background="#ffffff"
+		android:text="短信记录"
+		android:textColor="@color/blue" />
+
+	<Button
+		android:id="@+id/btn_online_reminder"
+		android:layout_rowSpan="1"
+		android:layout_rowWeight="1"
+		android:layout_columnSpan="1"
+		android:layout_columnWeight="1"
+		android:layout_gravity="fill"
+		android:layout_margin="0.5dp"
+		android:background="#ffffff"
+		android:text="上线提醒"
+		android:textColor="@color/blue" />
+
+	<Button
+		android:id="@+id/btn_screen_shot"
+		android:layout_rowSpan="1"
+		android:layout_rowWeight="1"
+		android:layout_columnSpan="1"
+		android:layout_columnWeight="1"
+		android:layout_gravity="fill"
+		android:layout_margin="0.5dp"
+		android:background="#ffffff"
+		android:text="截屏"
+		android:textColor="@color/blue" />
+
+	<Button
+		android:id="@+id/btn_same_screen"
+		android:layout_rowSpan="1"
+		android:layout_rowWeight="1"
+		android:layout_columnSpan="1"
+		android:layout_columnWeight="1"
+		android:layout_gravity="fill"
+		android:layout_margin="0.5dp"
+		android:background="#ffffff"
+		android:text="同屏"
+		android:textColor="@color/blue" />
+
+	<Button
+		android:id="@+id/btn_scan_app"
+		android:layout_rowSpan="1"
+		android:layout_rowWeight="1"
+		android:layout_columnSpan="1"
+		android:layout_columnWeight="1"
+		android:layout_gravity="fill"
+		android:layout_margin="0.5dp"
+		android:background="#ffffff"
+		android:text="扫描APP"
+		android:textColor="@color/blue" />
+
+	<Button
+		android:id="@+id/btn_delete_app"
+		android:layout_rowSpan="1"
+		android:layout_rowWeight="1"
+		android:layout_columnSpan="1"
+		android:layout_columnWeight="1"
+		android:layout_gravity="fill"
+		android:layout_margin="0.5dp"
+		android:background="#ffffff"
+		android:text="删除App"
+		android:textColor="@color/blue" />
+
+	<Button
+		android:id="@+id/btn_remote_record_Video"
+		android:layout_rowSpan="1"
+		android:layout_rowWeight="1"
+		android:layout_columnSpan="1"
+		android:layout_columnWeight="1"
+		android:layout_gravity="fill"
+		android:layout_margin="0.5dp"
+		android:background="#ffffff"
+		android:text="远程录像"
+		android:textColor="@color/blue" />
+
+	<Button
+		android:id="@+id/btn_remote_take_picture"
+		android:layout_rowSpan="1"
+		android:layout_rowWeight="1"
+		android:layout_columnSpan="1"
+		android:layout_columnWeight="1"
+		android:layout_gravity="fill"
+		android:layout_margin="0.5dp"
+		android:background="#ffffff"
+		android:text="远程拍照"
+		android:textColor="@color/blue" />
+
+	<Button
+		android:id="@+id/btn_remote_sound_record"
+		android:layout_rowSpan="1"
+		android:layout_rowWeight="1"
+		android:layout_columnSpan="1"
+		android:layout_columnWeight="1"
+		android:layout_gravity="fill"
+		android:layout_margin="0.5dp"
+		android:background="#ffffff"
+		android:text="远程录音"
+		android:textColor="@color/blue" />
+
+	<Button
+		android:id="@+id/btn_remote_trace"
+		android:layout_rowSpan="1"
+		android:layout_rowWeight="1"
+		android:layout_columnSpan="1"
+		android:layout_columnWeight="1"
+		android:layout_gravity="fill"
+		android:layout_margin="0.5dp"
+		android:background="#ffffff"
+		android:text="远程追踪"
+		android:textColor="@color/blue" />
+
+	<Button
+		android:id="@+id/btn_remote_location"
+		android:layout_rowSpan="1"
+		android:layout_rowWeight="1"
+		android:layout_columnSpan="1"
+		android:layout_columnWeight="1"
+		android:layout_gravity="fill"
+		android:layout_margin="0.5dp"
+		android:background="#ffffff"
+		android:text="远程定位"
+		android:textColor="@color/blue" />
+
+	<Button
+		android:id="@+id/btn_footprint"
+		android:layout_rowSpan="1"
+		android:layout_rowWeight="1"
+		android:layout_columnSpan="1"
+		android:layout_columnWeight="1"
+		android:layout_gravity="fill"
+		android:layout_margin="0.5dp"
+		android:background="#ffffff"
+		android:text="足迹"
+		android:textColor="@color/blue" />
+
+	<Button
+		android:id="@+id/btn_test"
+		android:layout_rowSpan="1"
+		android:layout_rowWeight="1"
+		android:layout_columnSpan="1"
+		android:layout_columnWeight="1"
+		android:layout_gravity="fill"
+		android:layout_margin="0.5dp"
+		android:background="#ffffff"
+		android:text="测试按钮"
+		android:textColor="@color/blue" />
+
+</GridLayout>

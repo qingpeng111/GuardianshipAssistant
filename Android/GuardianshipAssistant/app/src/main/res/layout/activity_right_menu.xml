@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+<!--    用于存放左侧点击之后的home、update、download...等的fragment-->
+    <RelativeLayout
+        android:id="@+id/fragment_right_menu"
+        android:layout_width="match_parent"
+        android:layout_height="500dp">
+
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/right_menu_activity_button"
+        android:layout_width="120dp"
+        android:layout_height="50dp"
+        android:text="返回"
+        android:gravity="center"/>
+</LinearLayout>

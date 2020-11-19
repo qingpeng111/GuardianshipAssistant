@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.activity.bottom.ChatActivity">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:orientation="horizontal">
+        <Button
+
+            android:layout_width="20dp"
+            android:layout_height="24dp"
+            android:layout_marginLeft="16dp"
+
+            android:layout_gravity="center_vertical"
+            android:background="@drawable/ic_bottom_chat_page_return"
+            android:id="@+id/chat_page_return"/>
+        <TextView
+            android:id="@+id/chat_page_title"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:background="#F7F7F7"
+            android:gravity="center"
+            android:textColor="#000"
+            android:textSize="24dp"
+            android:text="开始聊天了">
+
+        </TextView>
+
+
+    </LinearLayout>
+
+
+    <ListView
+        android:id="@+id/chat_page_listview"
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <EditText
+            android:id="@+id/chat_page_message"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"/>
+        <Button
+            android:id="@+id/chat_page_btn_send"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="发送"/>
+
+
+    </LinearLayout>
+</LinearLayout>

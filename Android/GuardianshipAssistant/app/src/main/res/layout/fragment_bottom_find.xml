@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ece7e7"
+    android:columnCount="4"
+    android:orientation="horizontal"
+    android:rowCount="5">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginHorizontal="0dp"
+        android:orientation="vertical">
+
+
+
+
+        <com.pandas.guardianshipassistant.ui.widget.SettingBar
+            android:id="@+id/btn_my_setting"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="0dp"
+            app:bar_leftText="在线教育"
+            app:bar_rightIcon="@drawable/arrows_right_ic"/>
+
+        <com.pandas.guardianshipassistant.ui.widget.SettingBar
+            android:id="@+id/sb_setting_update"
+            android:layout_width="match_parent"
+            android:layout_marginTop="0dp"
+            android:layout_height="wrap_content"
+            app:bar_leftText="@string/my_vip">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end|center_vertical"
+                android:layout_marginEnd="30dp"
+                android:background="@drawable/setting_update_bg"
+                android:paddingHorizontal="6dp"
+                android:paddingBottom="3dp"
+                android:text="开通"
+                android:textColor="@color/white"
+                android:textSize="15sp"
+                tools:ignore="HardcodedText" />
+
+        </com.pandas.guardianshipassistant.ui.widget.SettingBar>
+
+
+
+        <com.pandas.guardianshipassistant.ui.widget.SettingBar
+            android:id="@+id/sb_setting_agreement"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:bar_leftText="推荐好友"
+            app:bar_rightIcon="@drawable/arrows_right_ic" />
+
+
+    </LinearLayout>
+
+
+</LinearLayout>
+

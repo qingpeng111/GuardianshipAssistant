@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:orientation="vertical"
+	tools:context=".ui.activity.bottom.MySetting">
+	<!--    这里和原来的不一样，原来是自定义一个bar-->
+
+
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="48dp"
+		android:orientation="horizontal">
+
+		<Button
+
+			android:id="@+id/setting_page_return"
+			android:layout_width="20dp"
+			android:layout_height="24dp"
+
+			android:layout_gravity="center_vertical"
+			android:layout_marginLeft="16dp"
+			android:background="@drawable/ic_return" />
+
+		<androidx.appcompat.widget.Toolbar
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:gravity="center"
+			app:title="@string/setting_title">
+
+			<TextView
+				android:layout_width="match_parent"
+				android:layout_height="match_parent"
+				android:gravity="center"
+				android:text="设置"
+				android:background="@null"
+				/>
+		</androidx.appcompat.widget.Toolbar>
+	</LinearLayout>
+
+
+	<com.pandas.guardianshipassistant.ui.widget.SettingBar
+		android:id="@+id/sb_setting_language"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_marginTop="15dp"
+		app:bar_leftText="@string/setting_language"
+		app:bar_rightIcon="@drawable/arrows_right_ic"
+		tools:bar_rightHint="@string/setting_language_simple" />
+
+	<com.pandas.guardianshipassistant.ui.widget.SettingBar
+		android:id="@+id/sb_setting_update"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		app:bar_leftText="@string/setting_update">
+
+		<androidx.appcompat.widget.AppCompatTextView
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_gravity="end|center_vertical"
+			android:layout_marginEnd="30dp"
+			android:background="@drawable/setting_update_bg"
+			android:paddingHorizontal="6dp"
+			android:paddingBottom="3dp"
+			android:text="new"
+			android:textColor="@color/white"
+			android:textSize="15sp"
+			tools:ignore="HardcodedText" />
+
+	</com.pandas.guardianshipassistant.ui.widget.SettingBar>
+
+	<com.pandas.guardianshipassistant.ui.widget.SettingBar
+		android:id="@+id/sb_setting_phone"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_marginTop="15dp"
+		app:bar_leftText="@string/setting_phone"
+		app:bar_rightIcon="@drawable/arrows_right_ic"
+		tools:bar_rightText="181****1413" />
+
+	<com.pandas.guardianshipassistant.ui.widget.SettingBar
+		android:id="@+id/sb_setting_password"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		app:bar_leftText="@string/setting_password"
+		app:bar_rightIcon="@drawable/arrows_right_ic"
+		tools:bar_rightText="密码强度较低" />
+
+	<com.pandas.guardianshipassistant.ui.widget.SettingBar
+		android:id="@+id/sb_setting_agreement"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_marginTop="15dp"
+		app:bar_leftText="@string/setting_agreement"
+		app:bar_rightIcon="@drawable/arrows_right_ic" />
+
+	<com.pandas.guardianshipassistant.ui.widget.SettingBar
+		android:id="@+id/sb_setting_about"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		app:bar_leftText="@string/setting_about"
+		app:bar_rightIcon="@drawable/arrows_right_ic" />
+
+	<com.pandas.guardianshipassistant.ui.widget.SettingBar
+		android:id="@+id/sb_setting_auto"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_marginTop="15dp"
+		app:bar_leftText="@string/setting_auto">
+
+		<com.pandas.guardianshipassistant.ui.widget.SwitchButton
+			android:id="@+id/sb_setting_switch"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_gravity="end|center_vertical"
+			android:layout_marginHorizontal="15dp" />
+
+	</com.pandas.guardianshipassistant.ui.widget.SettingBar>
+
+	<com.pandas.guardianshipassistant.ui.widget.SettingBar
+		android:id="@+id/sb_setting_cache"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		app:bar_leftText="@string/setting_cache"
+		app:bar_rightIcon="@drawable/arrows_right_ic" />
+
+	<com.pandas.guardianshipassistant.ui.widget.SettingBar
+		android:id="@+id/sb_setting_exit"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_marginTop="15dp"
+		app:bar_leftColor="@color/red"
+		app:bar_leftText="@string/setting_exit" />
+</LinearLayout>

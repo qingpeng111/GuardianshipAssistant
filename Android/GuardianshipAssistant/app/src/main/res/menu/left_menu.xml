@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/left_menu_home"
+            android:icon="@drawable/ic_menu_home"
+            android:title="主页" />
+        <item
+            android:id="@+id/left_menu_update"
+            android:icon="@drawable/ic_menu_update"
+            android:title="更新" />
+        <item
+            android:id="@+id/left_menu_download"
+            android:icon="@drawable/ic_menu_download"
+            android:title="下载" />
+        <item
+            android:id="@+id/left_menu_tools"
+            android:icon="@drawable/ic_menu_tools"
+            android:title="工具" />
+    </group>
+
+    <item android:title="分享给朋友">
+        <menu>
+            <item
+                android:id="@+id/left_menu_share"
+                android:icon="@drawable/ic_menu_share"
+                android:title="分享" />
+            <item
+                android:id="@+id/left_menu_send"
+                android:icon="@drawable/ic_menu_send"
+                android:title="发送" />
+        </menu>
+    </item>
+</menu>

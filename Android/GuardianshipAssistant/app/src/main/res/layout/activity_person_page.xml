@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:orientation="vertical"
+	tools:context=".ui.activity.bottom.PersonPage">
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="48dp"
+		android:orientation="horizontal">
+
+		<Button
+
+			android:id="@+id/setting_page_return"
+			android:layout_width="20dp"
+			android:layout_height="24dp"
+
+			android:layout_gravity="center_vertical"
+			android:layout_marginLeft="16dp"
+			android:background="@drawable/ic_return" />
+
+		<androidx.appcompat.widget.Toolbar
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:gravity="center"
+			app:title="@string/setting_title">
+
+			<TextView
+				android:layout_width="match_parent"
+				android:layout_height="match_parent"
+				android:gravity="center"
+				android:text="设置"
+				android:background="@null"
+				/>
+		</androidx.appcompat.widget.Toolbar>
+	</LinearLayout>
+
+	<com.pandas.guardianshipassistant.ui.widget.SettingBar
+		android:id="@+id/fl_person_data_avatar"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:background="@drawable/white_selector"
+		app:bar_leftText="@string/personal_data_head">
+
+		<androidx.appcompat.widget.AppCompatImageView
+			android:id="@+id/iv_person_data_avatar"
+			android:layout_width="110dp"
+			android:layout_height="110dp"
+			android:layout_gravity="end|center_vertical"
+			android:layout_margin="20dp"
+			android:scaleType="centerCrop"
+			tools:src="@drawable/avatar_placeholder_ic" />
+
+	</com.pandas.guardianshipassistant.ui.widget.SettingBar>
+
+	<com.pandas.guardianshipassistant.ui.widget.SettingBar
+		android:id="@+id/sb_person_data_id"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_marginTop="10dp"
+		android:background="@color/white"
+		app:bar_leftText="@string/personal_data_id"
+		app:bar_rightText="用户ID" />
+
+	<com.pandas.guardianshipassistant.ui.widget.SettingBar
+		android:id="@+id/sb_person_data_name"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		app:bar_leftText="@string/personal_data_name"
+		app:bar_rightHint="@string/personal_data_name_hint"
+		app:bar_rightText="Android " />
+
+	<com.pandas.guardianshipassistant.ui.widget.SettingBar
+		android:id="@+id/sb_person_data_address"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		app:bar_leftText="@string/personal_data_address"
+		app:bar_rightHint="@string/personal_data_address_hint"
+		app:bar_rightIcon="@drawable/arrows_right_ic" />
+</LinearLayout>

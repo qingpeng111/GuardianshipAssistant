@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/toolbar_menu_search"
+        android:icon="@drawable/ic_toolbar_menu_search"
+        android:title="搜索"
+        app:showAsAction="ifRoom"/>
+    <item
+        android:id="@+id/toolbar_menu_settings"
+        android:icon="@drawable/ic_toolbar_menu_settings"
+        android:title="设置"
+        app:showAsAction="never"/>
+    <item
+        android:id="@+id/toolbar_menu_group_chat"
+        android:icon="@drawable/ic_toolbar_menu_group_chat"
+        android:title="发起群聊"
+        app:showAsAction="never"/>
+    <item
+        android:id="@+id/toolbar_menu_add_friends"
+        android:icon="@drawable/ic_toolbar_menu_add_friends"
+        android:title="添加好友"
+        app:showAsAction="never"/>
+
+    <item
+        android:id="@+id/toolbar_menu_scan"
+        android:icon="@drawable/ic_toolbar_menu_scan"
+        android:title="扫一扫"
+        app:showAsAction="never"/>
+    <item
+        android:id="@+id/toolbar_menu_help_feedback"
+        android:icon="@drawable/ic_toolbar_menu_help_feedback"
+        android:title="帮助与反馈"
+        app:showAsAction="never"/>
+
+
+</menu>
