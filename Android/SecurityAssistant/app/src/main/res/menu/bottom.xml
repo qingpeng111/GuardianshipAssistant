@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/menu_bottom_liaotian"
+        android:enabled="true"
+        android:icon="@drawable/ic_bottom_liaotian"
+        android:title="聊天"
+        app:showAsAction="withText" />
+    <item
+        android:id="@+id/menu_bottom_tongxunlu"
+        android:enabled="true"
+        android:icon="@drawable/ic_bottom_tongxunlu"
+        android:title="通讯录"
+        app:showAsAction="withText" />
+    <item
+        android:id="@+id/menu_bottom_baohu"
+        android:enabled="true"
+        android:icon="@drawable/ic_bottom_baohu"
+        android:title="保护"
+        android:checked="true"
+        app:showAsAction="withText" />
+    <item
+        android:id="@+id/menuE_bottom_faxian"
+        android:enabled="true"
+        android:icon="@drawable/ic_bottom_faxian"
+        android:title="发现"
+        app:showAsAction="withText" />
+    <item
+        android:id="@+id/menu_bottom_wode"
+        android:enabled="true"
+        android:icon="@drawable/ic_bottom_wode"
+        android:title="我的"
+        app:showAsAction="withText" />
+</menu>

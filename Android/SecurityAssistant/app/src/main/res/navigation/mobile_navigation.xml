@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.pandas.securityassistant.ui.left.home.HomeFragment"
+        android:label="@string/menu_home"
+        tools:layout="@layout/fragment_home" />
+
+    <fragment
+        android:id="@+id/nav_update"
+        android:name="com.pandas.securityassistant.ui.left.update.UpdateFragment"
+        android:label="@string/menu_update"
+        tools:layout="@layout/fragment_update" />
+
+    <fragment
+        android:id="@+id/nav_download"
+        android:name="com.pandas.securityassistant.ui.left.download.DownloadFragment"
+        android:label="@string/menu_download"
+        tools:layout="@layout/fragment_download" />
+
+    <fragment
+        android:id="@+id/nav_tools"
+        android:name="com.pandas.securityassistant.ui.left.tools.ToolsFragment"
+        android:label="@string/menu_tools"
+        tools:layout="@layout/fragment_tools" />
+
+    <fragment
+        android:id="@+id/nav_share"
+        android:name="com.pandas.securityassistant.ui.left.share.ShareFragment"
+        android:label="@string/menu_share"
+        tools:layout="@layout/fragment_share" />
+
+    <fragment
+        android:id="@+id/nav_send"
+        android:name="com.pandas.securityassistant.ui.left.send.SendFragment"
+        android:label="@string/menu_send"
+        tools:layout="@layout/fragment_send" />
+</navigation>

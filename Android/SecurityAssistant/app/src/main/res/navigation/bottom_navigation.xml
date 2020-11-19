@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/menu_bottom_liaotian">
+
+    <fragment
+        android:id="@+id/nav_bottom_liaotian"
+        android:name="com.pandas.securityassistant.ui.bottom.liaotian.LiaotianFragment"
+        android:label="聊天"
+        tools:layout="@layout/fragment_bottom_liaotian" />
+
+    <fragment
+        android:id="@+id/nav_bottom_tongxunlu"
+        android:name="com.pandas.securityassistant.ui.bottom.tongxunlu.TongxunluFragment"
+        android:label="通讯录"
+        tools:layout="@layout/fragment_bottom_tongxunlu" />
+
+    <fragment
+        android:id="@+id/nav__bottom_baohu"
+        android:name="com.pandas.securityassistant.ui.bottom.baohu.BaohuFragment"
+        android:label="保护"
+        tools:layout="@layout/fragment_bottom_baohu" />
+
+    <fragment
+        android:id="@+id/nav_bottom_faxian"
+        android:name="com.pandas.securityassistant.ui.bottom.faxian.FaxianFragment"
+        android:label="发现"
+        tools:layout="@layout/fragment_bottom_faxian" />
+
+    <fragment
+        android:id="@+id/nav_bottom_wode"
+        android:name="com.pandas.securityassistant.ui.bottom.wode.WodeFragment"
+        android:label="我的"
+        tools:layout="@layout/fragment_bottom_wode" />
+
+
+</navigation>

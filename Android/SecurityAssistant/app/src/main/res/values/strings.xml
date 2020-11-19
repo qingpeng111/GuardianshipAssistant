@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">SecurityAssistant</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+
+    <string name="action_group_chat">发起群聊</string>
+    <string name="action_add_Friends">添加朋友</string>
+    <string name="action_scan">扫一扫</string>
+    <string name="action_help">帮助与反馈</string>
+    <string name="action_settings">设置</string>
+
+    <string name="menu_home">主页</string>
+    <string name="menu_update">更新</string>
+    <string name="menu_download">下载</string>
+    <string name="menu_tools">工具</string>
+    <string name="menu_share">分享</string>
+    <string name="menu_send">发送</string>
+</resources>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/ic_menu_baohu"
+            android:title="@string/menu_home" />
+        <item
+            android:id="@+id/nav_update"
+            android:icon="@drawable/ic_menu_gengxin"
+            android:title="@string/menu_update" />
+        <item
+            android:id="@+id/nav_download"
+            android:icon="@drawable/ic_menu_xiazai"
+            android:title="@string/menu_download" />
+        <item
+            android:id="@+id/nav_tools"
+            android:icon="@drawable/ic_menu_gongju"
+            android:title="@string/menu_tools" />
+    </group>
+
+    <item android:title="分享给朋友">
+        <menu>
+            <item
+                android:id="@+id/nav_share"
+                android:icon="@drawable/ic_menu_fenxiang"
+                android:title="@string/menu_share" />
+            <item
+                android:id="@+id/nav_send"
+                android:icon="@drawable/ic_menu_fasong"
+                android:title="@string/menu_send" />
+        </menu>
+    </item>
+
+</menu>
